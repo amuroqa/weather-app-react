@@ -1,0 +1,146 @@
+body{
+  background-color: #121212;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding-top: 50px;
+
+}
+
+div {
+  text-align: center;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid #60a5fa;
+  border-radius: 8px;
+  background-color: #2a2a3e;
+  color: white;
+  margin-right: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  border: 1px solid #60a5fa;
+  background-color: transparent;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #60a5fa;
+  color: black;
+}
+
+.buscador{
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.tarjeta{
+  text-align: left;
+  width: 300px;
+  margin: 0 auto;
+  color:white;
+  background-color: #1a1a2e;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  justify-content: left;
+  font-size: 20px;
+}
+
+p:nth-child(2) {
+  font-size: 1.5rem;
+  color: #60a5fa;
+}
+
+.sugerencias {
+  list-style: none;
+  background-color: #2a2a3e;
+  border-radius: 8px;
+  margin-top: 5px;
+  padding: 10px;
+}
+
+.sugerencias li {
+  padding: 8px;
+  cursor: pointer;
+  color: white;
+}
+
+.sugerencias li:hover {
+  background-color: #60a5fa;
+  border-radius: 4px;
+}
+
+.sugerencias li.seleccionada {
+  background-color: #60a5fa;
+  border-radius: 4px;
+}
+
+.favoritos {
+  color: white;
+  background-color: #1a1a2e;
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 20px;
+  width: 300px;
+  margin: 20px auto;
+}
+
+.favoritos ul {
+  list-style: none;
+  padding: 0;
+}
+
+.favoritos li {
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.favoritos li:hover {
+  background-color: #60a5fa;
+}
+
+.pronostico {
+  color: white;
+  background-color: #1a1a2e;
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 20px;
+  width: 300px;
+  margin: 20px auto;
+}
+
+.pronostico ul {
+  list-style: none;
+  padding: 0;
+}
+
+.pronostico li {
+  padding: 10px;
+  border-radius: 4px;
+  margin: 5px 0;
+}
+
+.pronostico li:hover {
+  background-color: #60a5fa;
+}
+
+@media (max-width: 768px) {
+  .buscador {
+    flex-direction: column;
+  }
+  
+  .tarjeta {
+    width: 90%;
+  }
+}
