@@ -10,6 +10,7 @@
 - Aparece la tarjeta con datos de Madrid
 - Temperatura muestra un número
 - Descripción del clima se visualiza
+**Estado:** 🔴 Pendiente (falta validación de error en código)
 
 ## TC-02: Buscar ciudad no válida  
 **Pasos:**
@@ -50,9 +51,117 @@
 - La sección "Favoritos" se actualiza inmediatamente
 - Si no hay más favoritos, la sección desaparece
 
+## TC-06: Ver pronostico de 5 dias
+**Pasos:**
+1. Ingresa a https://amuroqa.github.io/weather-app-react/
+2. Escribe "Madrid" en el input
+3. Haz clic en "Buscar"
 
+**Resultado esperado:**
+- Aparece la tarjeta con datos actuales de Madrid
+- Se visualiza sección "Pronóstico 5 días" debajo
+- Muestra 5 registros con fecha y temperatura
+- Las temperaturas son números válidos
 
+## TC-07: navegar sugerencias con flechas
+**Pasos:**
+1. Ingresa a https://amuroqa.github.io/weather-app-react/
+2. Escribe "Mad" en el input (3 caracteres)
+3. Aparece lista de sugerencias
+4. Presiona flecha abajo (↓) para navegar entre opciones
+5. Presiona Enter para seleccionar la ciudad resaltada
 
+**Resultado esperado:**
+- Se visualiza lista de sugerencias (Madrid, Madeira, etc)
+- Cada flecha destaca una sugerencia diferente (color azul)
+- Al presionar Enter:
+  - El input se llena con el nombre completo de la ciudad
+  - Se ejecuta automáticamente la búsqueda
+  - Aparecen los datos del clima de esa ciudad
+  - Desaparecen las sugerencias
 
+## TC-08: Autocomplete miestra sugerencias al escribir
+**Pasos:**
+1. Ingresa a https://amuroqa.github.io/weather-app-react/
+2. Escribe "Bar" en el input (3 caracteres)
+
+**Resultado esperado:**
+- Se visualiza lista de sugerencias con "Bar" en el nombre
+- (Ejemplo: Barcelona, Barranquilla, Baracoa, etc)
+- Las sugerencias se actualizan según lo que escribes
+- Si borras caracteres (menos de 3), la lista desaparece
+
+## TC-09: Cargar favoritos al iniciar
+**Pasos:**
+1. Ingresa a https://amuroqa.github.io/weather-app-react/
+2. Escribe "Madrid" en el input
+3. Haz clic en "Buscar"
+4. Haz clic en botón "❤️ Favorito"
+5. Recarga la página (F5)
+6. Verifica la sección "Favoritos"
+
+**Resultado esperado:**
+- "Madrid" persiste en la sección "Favoritos" después de recargar
+- Los datos previos del clima NO aparecen (solo favoritos se cargan)
+- La sección "Favoritos" se visualiza correctamente
+- Sin duplicados al recargar
+
+## TC-10: Pronostico se carga desde el localstorage al iniciar
+
+**Pasos:**
+1. Ingresa a https://amuroqa.github.io/weather-app-react/
+2. Escribe "Madrid" en el input
+3. Haz clic en "Buscar"
+4. Abre DevTools (F12) → Application → Local Storage
+5. Verifica que existe la clave "pronostico"
+6. Recarga la página (F5)
+7. Verifica que los datos del pronóstico siguen en localStorage
+
+**Resultado esperado:**
+- Después de buscar Madrid, "pronostico" contiene datos
+- Después de recargar, "pronostico" sigue guardado
+- El pronóstico no se reinicia a []
+
+## TC-11: Busqueda sin conexion muestra error
+**Pasos:**
+1. Ingresa a https://amuroqa.github.io/weather-app-react/
+2. Desconecta el WiFi
+3. Escribe "Madrid" en el input
+4. Haz clic en "Buscar"
+
+**Resultado esperado:**
+- Aparece un mensaje de error: "Error de conexión - Verifica tu internet"
+- No aparece tarjeta del clima
+- El input mantiene el texto "Madrid"
+  **Estado:** 🔴 Pendiente (falta manejo de errores de conexión)
+
+## TC-12: Api inaccesible muestra mensaje
+**Pasos:**
+1. Ingresa a https://amuroqa.github.io/weather-app-react/
+2. Abre DevTools (F12) → Network
+3. Pon modo "Offline"
+4. Escribe "Madrid" en el input
+5. Haz clic en "Buscar"
+
+**Resultado esperado:**
+- No aparece tarjeta del clima
+- Aparece mensaje: "Error al conectar con la API"
+- El usuario entiende que hay problema con el servidor
+**Estado:** 🔴 Pendiente (falta try-catch para errores de API)
+
+## TC-13: Ciudad no encontrada muestra alerta
+
+**Pasos:**
+1. Ingresa a https://amuroqa.github.io/weather-app-react/
+2. Escribe "xyzabc123" (ciudad inexistente) en el input
+3. Haz clic en "Buscar"
+
+**Resultado esperado:**
+- No aparece tarjeta del clima
+- Aparece un mensaje de alerta: "Ciudad no encontrada"
+- El input mantiene el texto "xyzabc123"
+- El usuario sabe que debe escribir otra ciudad
+
+**Estado:** 🔴 Pendiente (falta validación de respuesta vacía)
 
   
