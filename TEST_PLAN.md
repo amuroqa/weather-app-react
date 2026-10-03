@@ -164,4 +164,47 @@
 
 **Estado:** 🔴 Pendiente (falta validación de respuesta vacía)
 
-  
+## TC-14: Interfaz se adapta a móvil (<768px)
+
+**Pasos:**
+1. Ingresa a https://amuroqa.github.io/weather-app-react/
+2. Escribe "Madrid" en el input
+3. Haz clic en "Buscar"
+4. Abre DevTools (F12)
+5. Haz clic en "Toggle device toolbar" (Ctrl+Shift+M)
+6. Selecciona un dispositivo móvil (<768px)
+
+**Resultado esperado:**
+- La tarjeta se ajusta al ancho de la pantalla móvil
+- El input y botón están bien espaciados
+- Texto legible sin necesidad de zoom
+- Favoritos y pronóstico se muestran en una columna
+
+## TC-15: Interfaz se adapta a tablet (768px - 1024px)
+
+**Pasos:**
+1. Ingresa a https://amuroqa.github.io/weather-app-react/
+2. Escribe "Madrid" en el input
+3. Haz clic en "Buscar"
+4. Abre DevTools (F12) → Toggle device toolbar
+5. Selecciona un dispositivo tablet (768px - 1024px)
+
+**Resultado esperado:**
+- La tarjeta se adapta al tamaño tablet
+- Elementos bien distribuidos
+- Toda la información visible sin scroll horizontal
+
+## TC-16: Interfaz se adapta a desktop (>1024px)
+
+**Pasos:**
+1. Ingresa a https://amuroqa.github.io/weather-app-react/
+2. Escribe "Madrid" en el input
+3. Haz clic en "Buscar"
+4. Abre DevTools (F12) → Toggle device toolbar
+5. Selecciona resolución desktop (>1024px)
+
+**Resultado esperado:**
+- La tarjeta se muestra en su tamaño óptimo
+- Espaciado adecuado entre elementos
+- Favoritos y pronóstico visibles sin scroll
+- Layout completo sin deformaciones
