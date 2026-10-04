@@ -1,4 +1,13 @@
 # TEST PLAN — Weather App React
+## Casos de Uso
+- UC-01: Buscar ciudad
+- UC-02: Favoritos (guardar, ver, eliminar)
+- UC-03: Pronóstico del tiempo
+- UC-04: Sugerencias de ciudades
+- UC-05: Navegación con teclado
+- UC-06: Persistencia con localStorage
+- UC-07: Responsividad en dispositivos
+- UC-08: Manejo de errores
 
 ## TC-01: Buscar ciudad válida
 **Pasos:**
